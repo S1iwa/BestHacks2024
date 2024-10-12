@@ -36,10 +36,12 @@
 
 a:link, a:visited {
     color: #DCF763;
+    text-decoration: none;
 }
 
 a:hover, a:active {
     color: #CBE652;
+    text-decoration: none;
 }
 
 .header-buttons {
