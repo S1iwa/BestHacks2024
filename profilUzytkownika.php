@@ -28,6 +28,10 @@
 
 	<div id="container">
         <div class="title">Profil użytkownika</div>
+
+        <div class="dane">
+            
+        </div>
 	</div>
 </body>
 </html>
