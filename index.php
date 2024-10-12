@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-    <meta name="description" content="Opis strony"/>
-    <meta name="keywords" content="słowa kluczowe oddzielone przecinkiem"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Praktykuj.edu.pl</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <!-- Nagłówek, który pojawia się po przewinięciu -->
 <header class="sticky-header">
     <div class="header-container">
-        <h1 class="header-title">Praktykuj.edu.pl</h1>
         <div class="header-buttons">
-            <a href="#" class="cta-button login-button">Zaloguj się</a>
+            <h1 class="header-title">Praktykuj.edu.pl</h1>
+            <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
             <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
         </div>
     </div>
 </header>
 
 <main class="center-content">
-    <!-- Przyciski w prawym górnym rogu -->
-    <div class="top-right-buttons">
-        <a href="#" class="cta-button login-button">Zaloguj się</a>
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
-    </div>
 
     <!-- Tytuł strony i napis pod spodem -->
     <h1 class="title">Praktykuj.edu.pl</h1>
@@ -73,7 +64,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
 </footer>
 
 <script>
@@ -91,5 +82,4 @@
     };
 </script>
 </body>
-
 </html>
