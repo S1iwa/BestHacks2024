@@ -12,6 +12,10 @@
     padding: 16px 16px;
     transition: top 0.3s ease;
 }
+.sticky-header-top {
+    position: fixed;
+    top: 0;
+}
 
 .sticky-header.visible {
     top: 0;

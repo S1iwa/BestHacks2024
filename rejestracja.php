@@ -11,12 +11,16 @@
     <title>praktykuj.edu.pl</title>
 
     <link rel="stylesheet" type="text/css" href="logowanieStyle.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+
 </head>
 
 <body>
     <div id="container">
 
-            <div class="title">Zarejestruj się</div>
+            <header id="logo">
+                <a href="index.php">Praktykuj.edu.pl</a>
+            </header>
 
             <form action="zarejestruj.php" method="post" autocomplete="off">
                 <label><input name="login" type="text" placeholder="e-mail" onfocus="this.placeholder=''" onblur="this.placeholder='e-mail'"/></label>
