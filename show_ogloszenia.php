@@ -6,7 +6,6 @@ $dbname = "main_database";
 
 $entries_count = 2;
 $keyword = isset($_POST["q"]) ? "*".$_POST["q"] : "";
-echo $keyword ." ". $entries_count;
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
