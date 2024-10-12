@@ -69,22 +69,33 @@ $result = $conn->query($sql);
         </section>
     </div>
 
+    <div class="margin-auto">
+        <h2>/ Przykładowe ogłoszenia /</h2>
+    </div>
+
     <!-- Ogłoszenia o pracę -->
     <section class="job-listings">
         <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $pensja = $row["pensja"];
-                    if($pensja == 1)
+                    if($row["pensja"] == 0)
                         $pensja = "Niepłatne";
+                    else
+                        $pensja = $row["pensja"].",00 PLN / mies.";
                     echo '<div class="job-listing">
-                        <img class="ogloszenie-zdjecie" src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
-                        <div class="item-content">
-                            <h2>Stanowisko: '.$row["stanowisko"].'</h2>
-                            <h3>Nazwa: '.$row['nazwa'].'</h3>
-                            <h4>'.$pensja.'</h4>
-                            <h4>'.$row["dziedzina"].'</h4>
-                            <h4>'.$row["data"].'</h4>
+                        <div class="item-image"> 
+                            <img src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
+                        </div>
+                        <div class="item">
+                            <div class="item-content">
+                                <h2><span style="color: #DCF763">'.$row["stanowisko"].'</span></h2>
+                                <h3>'.$row['nazwa'].'</h3>
+                                <h3>'.$pensja.'</h3>
+                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+                            </div>
+                            <div class="item-content-right"> 
+                                <h4>'.$row["data"].'</h4>
+                            </div>
                         </div>
                  </div>';
                 }

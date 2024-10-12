@@ -10,22 +10,40 @@
 </head>
 <body>
     <?php
-        $login = $_POST['login'];
-        $haslo = $_POST['haslo'];
-        $imie = $_POST['imie'];
-        $nazwisko = $_POST['nazwisko'];
-        $PESEL = $_POST['PESEL'];
-        $uczelnia = $_POST['uczelnia'];
-        $kierunek = $_POST['kierunek'];
+        if(isset($_SESSION["pracodawca"])){
+            $login = $_POST['login'];
+            $haslo = $_POST['haslo'];
+            $nip = $_POST['nip'];
+            $nazwa = $_POST['nazwa'];
 
-        $mysqli = new mysqli( "localhost", "root", "", "main_database");
+            $mysqli = new mysqli( "localhost", "root", "", "main_database");
 
-        if ($mysqli->connect_error) {
-            echo "Blad polaczenia";
-        } else {
-            $query = "INSERT INTO student(Email, Haslo, Imie, Nazwisko, PESEL, Uczelnia, Kierunek) VALUES ('$login', '$haslo', '$imie', '$nazwisko', '$PESEL', '$uczelnia', '$kierunek')";
+            if ($mysqli->connect_error) {
+                echo "Blad polaczenia";
+            } else {
+                $query = "INSERT INTO pracodawca(Email, Haslo, NIP, Nazwa,) VALUES ('$login', '$haslo', '$nip', '$nazwa')";
 
-            $result = $mysqli->query($query);
+                $result = $mysqli->query($query);
+            }
+        }
+        if(isset($_SESSION["student"])){
+            $login = $_POST['login'];
+            $haslo = $_POST['haslo'];
+            $imie = $_POST['imie'];
+            $nazwisko = $_POST['nazwisko'];
+            $PESEL = $_POST['PESEL'];
+            $uczelnia = $_POST['uczelnia'];
+            $kierunek = $_POST['kierunek'];
+
+            $mysqli = new mysqli( "localhost", "root", "", "main_database");
+
+            if ($mysqli->connect_error) {
+                echo "Blad polaczenia";
+            } else {
+                $query = "INSERT INTO student(Email, Haslo, Imie, Nazwisko, PESEL, Uczelnia, Kierunek) VALUES ('$login', '$haslo', '$imie', '$nazwisko', '$PESEL', '$uczelnia', '$kierunek')";
+
+                $result = $mysqli->query($query);
+            }
         }
 
     ?>
