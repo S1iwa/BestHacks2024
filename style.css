@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Nagłówek, który pojawia się po przewinięciu */
@@ -82,12 +83,6 @@ body {
     margin-bottom: 1rem;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #bbb;
-}
-
 /* Wyśrodkowanie głównego tytułu i napisu */
 main {
     display: flex;
@@ -96,7 +91,13 @@ main {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    padding-bottom: 50vh; /* Zapewnia, że po scrollowaniu okienka będą "niżej" */
+    margin-top: -50vh; /* Wyśrodkowanie napisu pionowo */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0; /* Zmniejszenie marginesu pod napisem */
+    color: #bbb;
 }
 
 /* Sekcja funkcji strony */
@@ -104,7 +105,7 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    margin: 10vh auto; /* Zapewnia, że sekcja będzie widoczna dopiero po scrollowaniu */
+    margin-top: 150vh; /* Zapewnia, że sekcja będzie widoczna dopiero po scrollowaniu */
     width: 80%;
 }
 
