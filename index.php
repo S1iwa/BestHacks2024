@@ -104,7 +104,7 @@ $result = $conn->query($sql);
 
     <!-- Przycisk na samym dole -->
     <section class="action-buttons-bottom">
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj wszystkie ogłoszenia</a>
+        <a href="ogloszenia.php" class="cta-button secondary browse-button">Przeglądaj wszystkie ogłoszenia</a>
     </section>
 </main>
 

@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 <body>
 <!-- Nagłówek, który pojawia się po przewinięciu -->
 <header class="sticky-header" style="top: 0; position: sticky;">
-    <h1 class="header-title">Praktykuj.edu.pl</h1>
+    <a href="index.php"><h1 class="header-title">Praktykuj.edu.pl</h1></a>
     <form>
         <label>
             <input type="text" name="szukaj" placeholder="Szukaj...">
