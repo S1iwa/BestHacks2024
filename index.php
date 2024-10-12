@@ -73,14 +73,17 @@ $result = $conn->query($sql);
         <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
+                    $pensja = $row["pensja"];
+                    if($pensja == 1)
+                        $pensja = "Niepłatne";
                     echo '<div class="job-listing">
                         <img class="ogloszenie-zdjecie" src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
                         <div class="item-content">
-                            <h2>' . $row["stanowisko"] . '</h2>
-                            <h3>' . $row['nazwa'] . '</h3>
-                            <h4>' . $row["pensja"] . '</h4>
-                            <h4>' . $row["dziedzina"] . '</h4>
-                            <h4>' . $row["data"] . '</h4>
+                            <h2>Stanowisko: '.$row["stanowisko"].'</h2>
+                            <h3>Nazwa: '.$row['nazwa'].'</h3>
+                            <h4>'.$pensja.'</h4>
+                            <h4>'.$row["dziedzina"].'</h4>
+                            <h4>'.$row["data"].'</h4>
                         </div>
                  </div>';
                 }

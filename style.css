@@ -165,4 +165,6 @@ footer {
 
 .ogloszenie-zdjecie {
     width: 150px;
+    border-radius: 10px;
+    margin-right: 25px;
 }
