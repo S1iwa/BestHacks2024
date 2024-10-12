@@ -11,6 +11,7 @@
 	<title>praktykuj.edu.pl</title>
 
 	<link rel="stylesheet" type="text/css" href="logowanieStyle.css">
+	<link rel="stylesheet" type="text/css" href="headder.css"
 </head>
 
 <body>
