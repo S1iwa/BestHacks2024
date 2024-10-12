@@ -25,7 +25,7 @@
 
                 <label><input name="haslo2" type="password" placeholder="powtórz hasło" onfocus="this.placeholder=''" onblur="this.placeholder='powtórz hasło'"/></label>
 
-                <label><input name="nr" type="number" placeholder="PESEL/NIP" onfocus="this.placeholder=''" onblur="this.placeholder='PESEL/NIP'"></label>
+                <label><input name="nr" type="text" placeholder="PESEL/NIP" onfocus="this.placeholder=''" onblur="this.placeholder='PESEL/NIP'"></label>
 
                 <input type="submit" value="Zarejestruj się"/>
             </form>
