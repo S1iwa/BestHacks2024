@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	if (isset($_GET["logout"]) && $_GET["logout"]) {
+		session_unset();
+		session_abort();
+		session_destroy();
+	}
 ?>
 
 <!DOCTYPE HTML>
