@@ -4,13 +4,13 @@ $username = "root";
 $password = "";
 $dbname = "main_database";
 
-$keyword = isset($_POST["szukaj"]) ? "".$_POST["szukaj"] : "";
+$keyword = isset($_POST["szukaj"]) ? $_POST["szukaj"] : "";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID WHERE o.stanowisko LIKE '".$keyword."%'";
+$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID WHERE o.stanowisko LIKE '%".$keyword."%'";
 $result = $conn->query($sql);
 ?>
 
