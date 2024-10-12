@@ -4,13 +4,13 @@ $username = "root";
 $password = "";
 $dbname = "main_database";
 
-$keyword = isset($_POST["q"]) ? "*".$_POST["q"] : "";
+$keyword = isset($_POST["szukaj"]) ? "".$_POST["szukaj"] : "";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID WHERE o.dziedzina LIKE '".$keyword."%'";
+$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID WHERE o.stanowisko LIKE '".$keyword."%'";
 $result = $conn->query($sql);
 ?>
 
@@ -29,9 +29,9 @@ $result = $conn->query($sql);
 <!-- Nagłówek, który pojawia się po przewinięciu -->
 <header class="sticky-header" style="top: 0; position: sticky;">
     <a href="index.php"><h1 class="header-title">Praktykuj.edu.pl</h1></a>
-    <form>
+    <form method="POST" action="ogloszenia.php">
         <label>
-            <input type="text" name="szukaj" placeholder="Szukaj...">
+            <input type="text" name="szukaj" placeholder="Szukaj..." value="<?php echo $keyword; ?>" />
         </label>
     </form>
     <div class="header-buttons">
