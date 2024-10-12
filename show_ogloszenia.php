@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, logo, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP WHERE o.dziedzina LIKE '".$keyword."%' LIMIT ".$entries_count;
+$sql = "SELECT priorytet, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca WHERE o.dziedzina LIKE '".$keyword."%' ORDER BY priorytet DESC LIMIT ".$entries_count;
 $result = $conn->query($sql);
 ?>
 <style>
@@ -55,14 +55,14 @@ body {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="item">
-                <img src="data:image/jpeg;base64,' . base64_encode($row["logo"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
+                <img src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
                 <div class="item-content">
                     <h2>' . $row["stanowisko"] . '</h2>
                     <h3>' . $row['nazwa'] . '</h3>
                     <h4>' . $row["pensja"] . '</h4>
                     <h4>' . $row["dziedzina"] . '</h4>
                     <h4>' . $row["data"] . '</h4>
-                    <h4>Id: ' . $row["id"] . '</h4>
+                    <h4>' . $row["priorytet"] . '</h4>
                 </div>
             </div>';
         }
