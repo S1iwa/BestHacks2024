@@ -10,42 +10,32 @@
 </head>
 <body>
     <?php
-        if(isset($_SESSION["pracodawca"])){
-            $login = $_POST['login'];
-            $haslo = $_POST['haslo'];
-            $nip = $_POST['nip'];
-            $nazwa = $_POST['nazwa'];
+        $login = $_POST['login'];
+        $haslo = $_POST['haslo'];
+        $haslo2 = $_POST['haslo2'];
+        $nr = $_POST['nr'];
 
-            $mysqli = new mysqli( "localhost", "root", "", "main_database");
+        $mysqli = new mysqli( "localhost", "root", "", "main_database");
 
-            if ($mysqli->connect_error) {
-                echo "Blad polaczenia";
+        if($haslo == $haslo2){
+            if (strlen($nr) == 10) {
+                $query = "INSERT INTO pracodawca(Email, Haslo, NIP) VALUES ('$login', '$haslo', '$nr')";
+            } elseif (strlen($nr) == 11) {
+                $query = "INSERT INTO student(Email, Haslo, PESEL) VALUES ('$login', '$haslo', '$nr')";
             } else {
-                $query = "INSERT INTO pracodawca(Email, Haslo, NIP, Nazwa,) VALUES ('$login', '$haslo', '$nip', '$nazwa')";
-
-                $result = $mysqli->query($query);
+                die("Nieprawidłowy PESEL. PESEL musi mieć 10 lub 11 cyfr.");
             }
-        }
-        if(isset($_SESSION["student"])){
-            $login = $_POST['login'];
-            $haslo = $_POST['haslo'];
-            $imie = $_POST['imie'];
-            $nazwisko = $_POST['nazwisko'];
-            $PESEL = $_POST['PESEL'];
-            $uczelnia = $_POST['uczelnia'];
-            $kierunek = $_POST['kierunek'];
 
-            $mysqli = new mysqli( "localhost", "root", "", "main_database");
-
-            if ($mysqli->connect_error) {
-                echo "Blad polaczenia";
+            if ($mysqli->query($query) === TRUE) {
+                echo "Rejestracja zakończona sukcesem.";
             } else {
-                $query = "INSERT INTO student(Email, Haslo, Imie, Nazwisko, PESEL, Uczelnia, Kierunek) VALUES ('$login', '$haslo', '$imie', '$nazwisko', '$PESEL', '$uczelnia', '$kierunek')";
-
-                $result = $mysqli->query($query);
+                echo "Błąd: " . $mysqli->error;
             }
-        }
 
+            $mysqli->close();
+        } else {
+            echo "Hasła nie są takie same" . $mysqli->error;
+        }
     ?>
 </body>
 </html>
