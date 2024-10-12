@@ -19,6 +19,15 @@
 
 .header-title {
     font-size: 24px;
+
+}
+
+a:link, a:visited {
+    color: #DCF763;
+}
+
+a:hover, a:active {
+    color: #CBE652;
 }
 
 .header-buttons {
