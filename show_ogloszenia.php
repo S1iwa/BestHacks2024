@@ -3,15 +3,13 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "main_database";
-
-// Create connection
+$entries_count = 2;
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa  FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP";
+$sql = "SELECT TOP " . $entries_count . " id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa  FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP ";
 $result = $conn->query($sql);
 ?>
 <style>
@@ -57,14 +55,14 @@ $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="item">
-                <img src="data:image/jpeg;base64,'.base64_encode($row["zdjecie"]).'" alt="'.$row["stanowisko"].'" class="item-image" />
+                <img src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
                 <div class="item-content">
-                    <h2>'.$row["stanowisko"].'</h2>
-                    <h3>'.$row['nazwa'].'</h3>
-                    <h4>'.$row["pensja"].'</h4>
-                    <h4>'.$row["dziedzina"].'</h4>
-                    <h4>'.$row["data"].'</h4>
-                    <h4>Id: '.$row["id"].'</h4>
+                    <h2>' . $row["stanowisko"] . '</h2>
+                    <h3>' . $row['nazwa'] . '</h3>
+                    <h4>' . $row["pensja"] . '</h4>
+                    <h4>' . $row["dziedzina"] . '</h4>
+                    <h4>' . $row["data"] . '</h4>
+                    <h4>Id: ' . $row["id"] . '</h4>
                 </div>
             </div>';
         }
