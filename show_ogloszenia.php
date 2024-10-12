@@ -29,20 +29,20 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Spacing between divs */
+    gap: 20px;
     padding: 20px;
 }
 
 .item {
     display: flex;
-    align-items: flex-start; /* Align items at the top */
-    gap: 15px; /* Space between image and text */
+    align-items: flex-start;
+    gap: 15px;
 }
 
 .item-image {
-    width: 150px; /* Adjust image size */
+    width: 150px;
     height: auto;
-    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    object-fit: cover;
     border-radius: 5px;
 }
 
