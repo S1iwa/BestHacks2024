@@ -23,7 +23,8 @@
             $result = $mysqli->query($query);
             
             if ($result && $result->num_rows > 0) {
-                echo "Zalogowano pomyślnie!";
+                header("Location: profilUzytkownika.php");
+                exit();
             } else {
                 echo "Błędny login lub hasło!";
             }

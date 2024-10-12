@@ -14,4 +14,5 @@ body{
     margin-right: auto;
     border-radius: 8px;
     box-shadow: 3px 3px 30px 5px #dcf763;
+    color: #dcf763 !important;
 }

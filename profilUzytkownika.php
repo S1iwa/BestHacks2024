@@ -1,4 +1,4 @@
-<img?php
+<?php
 	session_start();
 ?>
 
@@ -26,26 +26,33 @@
     </header>
 
 	<div id="container">
-        <div class="title">Profil użytkownika</div>
+        <span>Profil użytkownika</span>
 
-        <div class="dane">
-            <div class="dane-uzytkownika">
-                <div class="pliki">
-                    <div class="zdjecie">
+        <?php
+
+        $mysqli = new mysqli( "localhost", "root", "", "main_database");
+
+        $id = 1; //$_SESSION["user_id"]
+        $sql = "SELECT * FROM student WHERE ID = $id"; // Use double quotes
+
+        $result = $mysqli->query($sql);
+        
+       
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            
+            echo    "
+                    <div>
+                        
                     </div>
-                    <div class="CV">
-                    </div>    
-                </div>
-                <div class="dane-osobowe">
-                    <div class="imie"></div>
-                    <div class="nazwisko"></div>    
-                    <div class="email"></div>    
-                </div>
-                <div class="opis"></div>
-
-                <div class="zdjecie"></div>
-            </div>
-            <div class="dane-uczelni"></div>
+                    <div>
+                        <h1>{$row['Imie']} {$row['Nazwisko']}</h1>
+                    </div>
+                    ";
+        }
+        
+        $mysqli->close();
+        ?>
         </div>
 	</div>
 </body>
