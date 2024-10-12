@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID";
+$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID WHERE o.dziedzina LIKE '".$keyword."%'";
 $result = $conn->query($sql);
 ?>
 
