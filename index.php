@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP LIMIT ".$entries_count;
+$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LIMIT ".$entries_count;
 $result = $conn->query($sql);
 ?>
 
@@ -40,7 +40,7 @@ $result = $conn->query($sql);
     <!-- Przyciski w prawym górnym rogu -->
     <div class="top-right-buttons">
         <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
+        <a href="ogloszenia.php" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
     </div>
 
     <!-- Tytuł strony -->

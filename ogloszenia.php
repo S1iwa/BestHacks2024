@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP";
+$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID";
 $result = $conn->query($sql);
 ?>
 
@@ -27,8 +27,13 @@ $result = $conn->query($sql);
 </head>
 <body>
 <!-- Nagłówek, który pojawia się po przewinięciu -->
-<header class="sticky-header" style="top: 0;">
+<header class="sticky-header" style="top: 0; position: sticky;">
     <h1 class="header-title">Praktykuj.edu.pl</h1>
+    <form>
+        <label>
+            <input type="text" name="szukaj" placeholder="Szukaj...">
+        </label>
+    </form>
     <div class="header-buttons">
         <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
     </div>
