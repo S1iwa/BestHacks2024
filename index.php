@@ -1,3 +1,20 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "main_database";
+
+$entries_count = 3;
+$keyword = isset($_POST["q"]) ? "*".$_POST["q"] : "";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP LIMIT ".$entries_count;
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -38,8 +55,9 @@
         <!-- Trzy okienka prezentujące główne funkcje strony -->
         <section class="features">
             <div class="feature-box">
-                <h3>Praktyki studenckie</h3>
-                <p>Znajdź praktyki zgodne z Twoim kierunkiem studiów.</p>
+                <?php
+                    echo "jajecznica";
+                ?>
             </div>
             <div class="feature-box">
                 <h3>Staże</h3>
