@@ -4,42 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Praktykuj.edu.pl</title>
+    <title>Strona Główna</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- Nagłówek, który pojawia się po przewinięciu -->
 <header class="sticky-header">
     <div class="header-container">
+        <h1 class="header-title">Praktykuj.edu.pl</h1>
         <div class="header-buttons">
-            <h1 class="header-title">Praktykuj.edu.pl</h1>
-            <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
+            <a href="#" class="cta-button login-button">Zaloguj się</a>
             <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
         </div>
     </div>
 </header>
 
 <main class="center-content">
+    <!-- Przyciski w prawym górnym rogu -->
+    <div class="top-right-buttons">
+        <a href="#" class="cta-button login-button">Zaloguj się</a>
+        <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
+    </div>
 
-    <!-- Tytuł strony i napis pod spodem -->
-    <h1 class="title">Praktykuj.edu.pl</h1>
-    <p class="subtitle">Practice makes perfect</p>
+    <!-- Tytuł strony -->
+    <div class="hero-section">
 
-    <!-- Trzy okienka prezentujące główne funkcje strony (widoczne po przewinięciu) -->
-    <section class="features">
-        <div class="feature-box">
-            <h3>Praktyki studenckie</h3>
-            <p>Znajdź praktyki zgodne z Twoim kierunkiem studiów.</p>
+        <div class="hero-container">
+            <h1 class="title">Praktykuj.edu.pl</h1>
+            <p class="subtitle">PRAKTYKA CZYNI MISTRZA</p>
         </div>
-        <div class="feature-box">
-            <h3>Staże</h3>
-            <p>Rozpocznij karierę, zdobywając doświadczenie zawodowe.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Oferty pracy</h3>
-            <p>Przeglądaj aktualne oferty pracy i znajdź wymarzoną pracę.</p>
-        </div>
-    </section>
+
+        <!-- Trzy okienka prezentujące główne funkcje strony -->
+        <section class="features">
+            <div class="feature-box">
+                <h3>Praktyki studenckie</h3>
+                <p>Znajdź praktyki zgodne z Twoim kierunkiem studiów.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Staże</h3>
+                <p>Rozpocznij karierę, zdobywając doświadczenie zawodowe.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Oferty pracy</h3>
+                <p>Przeglądaj aktualne oferty pracy i znajdź wymarzoną pracę.</p>
+            </div>
+        </section>
+    </div>
 
     <!-- Ogłoszenia o pracę -->
     <section class="job-listings">
