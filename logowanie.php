@@ -19,6 +19,7 @@
 			<label><input name="login" type="text" placeholder="email" onfocus="this.placeholder=''" onblur="this.placeholder='email'"/></label>
 			<label><input name="haslo" type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'"/></label>
 			<input type="submit" value="Zaloguj się" />
+			<div class="bladLogowania">Błędny login lub hasło!</div>
 		</form>
 	</div>
 </body>
