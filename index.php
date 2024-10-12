@@ -73,7 +73,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2024 Wszelkie prawa zastrzeżone.</p>
 </footer>
 
 <script>
