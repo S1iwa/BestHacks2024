@@ -54,9 +54,8 @@ $result = $conn->query($sql);
         <!-- Trzy okienka prezentujące główne funkcje strony -->
         <section class="features">
             <div class="feature-box">
-                <?php
-                    echo "jajecznica";
-                ?>
+                <h3>Praktyki studenckie</h3>
+                <p>Znajdź praktyki zgodne z Twoim kierunkiem studiów.</p>
             </div>
             <div class="feature-box">
                 <h3>Staże</h3>
@@ -71,18 +70,22 @@ $result = $conn->query($sql);
 
     <!-- Ogłoszenia o pracę -->
     <section class="job-listings">
-        <div class="job-listing">
-            <h3>Ogłoszenie o pracę #1</h3>
-            <p>Szukamy dynamicznego specjalisty ds. marketingu. Atrakcyjne warunki pracy!</p>
-        </div>
-        <div class="job-listing">
-            <h3>Ogłoszenie o pracę #2</h3>
-            <p>Poszukujemy programisty full-stack. Praca w młodym zespole, projekty IT.</p>
-        </div>
-        <div class="job-listing">
-            <h3>Ogłoszenie o pracę #3</h3>
-            <p>Oferta stażu w dziale HR. Idealna szansa na rozwój w branży rekrutacyjnej.</p>
-        </div>
+        <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="job-listing">
+                        <img class="ogloszenie-zdjecie" src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
+                        <div class="item-content">
+                            <h2>' . $row["stanowisko"] . '</h2>
+                            <h3>' . $row['nazwa'] . '</h3>
+                            <h4>' . $row["pensja"] . '</h4>
+                            <h4>' . $row["dziedzina"] . '</h4>
+                            <h4>' . $row["data"] . '</h4>
+                        </div>
+                 </div>';
+                }
+            }
+        ?>
     </section>
 
     <!-- Przycisk na samym dole -->
