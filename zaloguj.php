@@ -24,7 +24,7 @@
             if ($result && $result->num_rows > 0) {
                 echo "Zalogowano pomyślnie!";
             } else {
-                echo "Błędny login lub hasło!";
+                echo '<div class="bladLogowania">Błędny login lub hasło!</div>';
             }
         }
 

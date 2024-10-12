@@ -14,6 +14,7 @@
         <div class="header-buttons">
             <h1 class="header-title">Praktykuj.edu.pl</h1>
             <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
+            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
             <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
         </div>
     </div>
