@@ -24,6 +24,7 @@ $result = $conn->query($sql);
     <title>Strona Główna</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ogloszenie.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
 <!-- Nagłówek, który pojawia się po przewinięciu -->
