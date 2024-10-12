@@ -72,6 +72,8 @@ h2 {
 /* Przycisk na dole */
 .action-buttons-bottom {
     margin-top: 32px;
+    width: 100%;
+    text-align: center;
 }
 
 footer {
