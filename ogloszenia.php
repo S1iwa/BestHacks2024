@@ -23,25 +23,18 @@ $result = $conn->query($sql);
     <title>Strona Główna</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ogloszenie.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
 <!-- Nagłówek, który pojawia się po przewinięciu -->
-<header class="sticky-header">
+<header class="sticky-header" style="top: 0;">
     <h1 class="header-title">Praktykuj.edu.pl</h1>
     <div class="header-buttons">
         <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
     </div>
 </header>
 
 <main class="center-content">
-    <!-- Przyciski w prawym górnym rogu -->
-    <div class="top-right-buttons">
-        <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
-    </div>
-
     <!-- Ogłoszenia o pracę -->
     <section class="job-listings">
         <?php

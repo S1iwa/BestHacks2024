@@ -32,7 +32,7 @@ $result = $conn->query($sql);
     <a href="index.php"><h1 class="header-title">Praktykuj.edu.pl</h1></a>
     <div class="header-buttons">
         <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
+        <a href="ogloszenia.php" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
     </div>
 </header>
 
