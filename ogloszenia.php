@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca WHERE o.dziedzina LIKE '".$keyword."%' ORDER BY priorytet DESC WHERE o.stanowisko LIKE '%".$keyword."%'";
+$sql = "SELECT dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca WHERE o.dziedzina LIKE '%".$keyword."%' ORDER BY priorytet DESC";
 $result = $conn->query($sql);
 ?>
 
