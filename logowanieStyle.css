@@ -1,11 +1,14 @@
 body{
     background-color: #23272a;
     font-size: 20px;
+    font-family: "Lato", sans-serif;
 }
 #container{
     background-color: #23272a;
-    width: 300px;
+    width: 250px;
     padding: 50px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
@@ -13,7 +16,7 @@ body{
     box-shadow: 3px 3px 30px 5px #dcf763;
 }
 input[type=text],input[type=password]{
-    width: 300px;
+    width: 250px;
     background-color: #23272a;
     color: #dcf763;
     border: 2px solid #dcf763;
@@ -31,7 +34,7 @@ input[type=text]:focus,input[type=password]:focus{
     color: #dcf763;
 }
 input[type=submit]{
-    width: 300px;
+    width: 250px;
     background-color: #dcf763;
     font-size: 20px;
     color: white;
@@ -49,4 +52,14 @@ input[type=submit]:focus{
 }
 input[type=submit]:hover{
     background-color: #dcf763;
+}
+.bladLogowania{
+    margin-top: 8px;
+    color: #dcf763;
+    font-size: 16px;
+}
+.title{
+    text-align: center;
+    color: #dcf763;
+    font-size: 32px;
 }

@@ -1,3 +1,20 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "main_database";
+
+$entries_count = 3;
+$keyword = isset($_POST["q"]) ? "*".$_POST["q"] : "";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP LIMIT ".$entries_count;
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -14,6 +31,7 @@
         <h1 class="header-title">Praktykuj.edu.pl</h1>
         <div class="header-buttons">
             <a href="#" class="cta-button login-button">Zaloguj się</a>
+            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
             <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
         </div>
     </div>
@@ -53,18 +71,25 @@
 
     <!-- Ogłoszenia o pracę -->
     <section class="job-listings">
-        <div class="job-listing">
-            <h3>Ogłoszenie o pracę #1</h3>
-            <p>Szukamy dynamicznego specjalisty ds. marketingu. Atrakcyjne warunki pracy!</p>
-        </div>
-        <div class="job-listing">
-            <h3>Ogłoszenie o pracę #2</h3>
-            <p>Poszukujemy programisty full-stack. Praca w młodym zespole, projekty IT.</p>
-        </div>
-        <div class="job-listing">
-            <h3>Ogłoszenie o pracę #3</h3>
-            <p>Oferta stażu w dziale HR. Idealna szansa na rozwój w branży rekrutacyjnej.</p>
-        </div>
+        <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $pensja = $row["pensja"];
+                    if($pensja == 1)
+                        $pensja = "Niepłatne";
+                    echo '<div class="job-listing">
+                        <img class="ogloszenie-zdjecie" src="data:image/jpeg;base64,' . base64_encode($row["zdjecie"]) . '" alt="' . $row["stanowisko"] . '" class="item-image" />
+                        <div class="item-content">
+                            <h2>Stanowisko: '.$row["stanowisko"].'</h2>
+                            <h3>Nazwa: '.$row['nazwa'].'</h3>
+                            <h4>'.$pensja.'</h4>
+                            <h4>'.$row["dziedzina"].'</h4>
+                            <h4>'.$row["data"].'</h4>
+                        </div>
+                 </div>';
+                }
+            }
+        ?>
     </section>
 
     <!-- Przycisk na samym dole -->

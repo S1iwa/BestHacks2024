@@ -12,23 +12,22 @@
     <?php
         $login = $_POST['login'];
         $haslo = $_POST['haslo'];
+        $imie = $_POST['imie'];
+        $nazwisko = $_POST['nazwisko'];
+        $PESEL = $_POST['PESEL'];
+        $uczelnia = $_POST['uczelnia'];
+        $kierunek = $_POST['kierunek'];
 
         $mysqli = new mysqli( "localhost", "root", "", "main_database");
 
         if ($mysqli->connect_error) {
             echo "Blad polaczenia";
         } else {
-            $query = "SELECT * FROM student WHERE Email = '$login' AND Haslo = '$haslo'";
+            $query = "INSERT INTO student(Email, Haslo, Imie, Nazwisko, PESEL, Uczelnia, Kierunek) VALUES ('$login', '$haslo', '$imie', '$nazwisko', '$PESEL', '$uczelnia', '$kierunek')";
+
             $result = $mysqli->query($query);
-            
-            if ($result && $result->num_rows > 0) {
-                echo "Zalogowano pomyślnie!";
-            } else {
-                echo "Błędny login lub hasło!";
-            }
         }
 
-        $result->close();
     ?>
 </body>
 </html>

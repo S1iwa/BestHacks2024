@@ -127,9 +127,11 @@ body {
 
 /* Sekcja z ogłoszeniami */
 .job-listings {
-    width: 100%;
+    width: 865px;
     padding: 0 32px;
     margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .job-listing {
@@ -137,6 +139,7 @@ body {
     padding: 24px;
     margin-bottom: 24px;
     border-radius: 8px;
+    display: flex;
 }
 
 .job-listing h3 {
@@ -158,4 +161,10 @@ footer {
     margin-top: 32px;
     text-align: center;
     color: #bbb;
+}
+
+.ogloszenie-zdjecie {
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 25px;
 }
