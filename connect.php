@@ -2,6 +2,6 @@
 	$host = "localhost";
 	$db_user = "root";
 	$db_password = "";
-	$db_name = "ogloszenia";
+	$db_name = "main_database";
 ?>
 <?

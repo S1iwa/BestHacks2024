@@ -1,22 +1,29 @@
-<?php
-	session_start();
-?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>praktykuj.edu.pl</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie zamówienia</title>
 </head>
-
 <body>
-	<form action="zaloguj.php" method="post">
-	
-		Login: <br /> <input type="text" name="login" /> <br />
-		Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
-		<input type="submit" value="Zaloguj się" />
-	
-	</form>
+    <?php
+        $login = $_POST['login'];
+        $haslo = $_POST['haslo'];
 
+        $mysqli = new mysqli("localhost", "root", "", "main_database");
+
+        if ($mysqli->connect_error) {
+            echo "Blad polaczenia";
+        } else {
+            $query = "SELECT * FROM student WHERE login = '$login' AND haslo = '$haslo'";
+            $result = $mysqli->query($query);
+
+            if ($result && $result->num_rows > 0) {
+                echo "Zalogowano pomyślnie!";
+            } else {
+                echo "Błędny login lub hasło!";
+            }
+        }
+    ?>
 </body>
 </html>
