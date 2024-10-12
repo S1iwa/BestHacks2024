@@ -71,11 +71,6 @@ $result = $conn->query($sql);
         }
         ?>
     </section>
-
-    <!-- Przycisk na samym dole -->
-    <section class="action-buttons-bottom">
-        <a href="#" class="cta-button secondary browse-button">Przeglądaj wszystkie ogłoszenia</a>
-    </section>
 </main>
 
 <footer>
