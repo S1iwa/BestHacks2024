@@ -103,7 +103,7 @@ body {
 .features {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 800px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
