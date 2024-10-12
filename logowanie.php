@@ -11,11 +11,11 @@
 	<title>praktykuj.edu.pl</title>
 
 	<link rel="stylesheet" type="text/css" href="logowanieStyle.css">
-	<link rel="stylesheet" type="text/css" href="headder.css"
+    <link rel="stylesheet" href="header.css">
 </head>
 
 <body>
-	<header class="sticky-header">
+	<header class=".sticky-header-top">
 		<a href="index.php"><h1 class="header-title">Praktykuj.edu.pl</h1></a>
 		<div class="header-buttons">
 			<a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
