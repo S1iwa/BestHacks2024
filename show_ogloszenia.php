@@ -5,13 +5,13 @@ $password = "";
 $dbname = "main_database";
 
 $entries_count = 2;
-$keyword = isset($_POST["q"]) ? "*".$_POST["q"] : "";
+$keyword = isset($_POST["q"]) ? "%".$_POST["q"] : "";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP LIMIT ".$entries_count;
+$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP WHERE dziedzina LIKE '".$keyword."%' LIMIT ".$entries_count;
 $result = $conn->query($sql);
 ?>
 <style>
