@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -10,20 +13,22 @@
         $login = $_POST['login'];
         $haslo = $_POST['haslo'];
 
-        $mysqli = new mysqli("localhost", "root", "", "main_database");
+        $mysqli = new mysqli( "localhost", "root", "", "main_database");
 
         if ($mysqli->connect_error) {
             echo "Blad polaczenia";
         } else {
-            $query = "SELECT * FROM student WHERE login = '$login' AND haslo = '$haslo'";
+            $query = "SELECT * FROM student WHERE Email = '$login' AND Hasło = '$haslo'";
             $result = $mysqli->query($query);
-
+            
             if ($result && $result->num_rows > 0) {
                 echo "Zalogowano pomyślnie!";
             } else {
                 echo "Błędny login lub hasło!";
             }
         }
+
+        $result->close();
     ?>
 </body>
 </html>
