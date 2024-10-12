@@ -3,52 +3,52 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "main_database";
+
 $entries_count = 2;
+$keyword = isset($_POST["q"]) ? "*".$_POST["q"] : "";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT TOP " . $entries_count . " id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa  FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP ";
+$sql = "SELECT id, dziedzina, pensja, stanowisko, `data`, zdjecie, nazwa FROM ogloszenie o JOIN pracodawca p ON o.NIP_Pracodawca = p.NIP LIMIT ".$entries_count;
 $result = $conn->query($sql);
 ?>
 <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-    }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        gap: 20px;
-        padding: 20px;
-    }
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between divs */
+    padding: 20px;
+}
 
-    .item {
-        display: flex;
-        align-items: flex-start;
-        gap: 15px;
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
+.item {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 15px; /* Space between image and text */
+}
 
-    .item-image {
-        width: auto;
-        height: 16.66vh;
-        object-fit: cover;
-        border-radius: 5px;
-    }
+.item-image {
+    width: 150px; /* Adjust image size */
+    height: auto;
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    border-radius: 5px;
+}
 
-    .item-content p {
-        margin-bottom: 10px;
-    }
+.item-content p {
+    margin-bottom: 10px;
+}
 </style>
 <div class="container">
     <?php
