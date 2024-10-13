@@ -35,7 +35,7 @@ session_start();
 
     <div id="container">
         <header>
-            <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px" >Lorem ipsum</div>
+            <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px" >Praktyki studenckie — obowiązki pracodawcy</div>
         </header>
         <article>
             <section>
