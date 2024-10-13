@@ -28,6 +28,7 @@ session_start();
             $_SESSION["user_type"] = "student";
             $row = $result->fetch_assoc();
             $_SESSION["user_id"] = $row["id"];
+            header("Location: /h/profilUzytkownika.php");
         } else {
             $query = "SELECT id FROM pracodawca WHERE Email = '$login' AND Haslo = '$haslo'";
             $result = $mysqli->query($query);
