@@ -1,12 +1,13 @@
 <?php
 if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
-	// session isn't started
 	session_start();
 }
 if (isset($_GET["logout"]) && $_GET["logout"]) {
 	session_unset();
 	session_destroy();
-	session_start(); 
+	session_start();
+	header("Location: /h/index.php");
+	exit();
 }
 
 ?>
