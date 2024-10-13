@@ -23,7 +23,7 @@ $dbname = "main_database";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>praktykuj.edu.pl</title>
 
-    <link rel="stylesheet" type="text/css" href="l.css">
+    <link rel="stylesheet" type="text/css" href="ogloszenieStyle.css">
     <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" href="css/animation.css">
 
@@ -67,7 +67,7 @@ $dbname = "main_database";
             echo "
                     <div class=items style='margin-bottom: 40px'>
                         
-                        <div class=imagePracodawca>
+                        <div class=pic>
                             <img class='pic' src=\"data:image/jpeg;base64," . base64_encode(string: $re['logo']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>
