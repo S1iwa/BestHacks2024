@@ -67,7 +67,7 @@ $dbname = "main_database";
             echo "
                     <div class=items style='margin-bottom: 40px'>
                         
-                        <div class=pic>
+                        <div class=imagePracodawca>
                             <img class='pic' src=\"data:image/jpeg;base64," . base64_encode(string: $re['logo']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>
