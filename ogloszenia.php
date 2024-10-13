@@ -10,8 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "SELECT pensja, stanowisko, `data`, logo, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca WHERE o.stanowisko LIKE '%" . $keyword . "%' ORDER BY priorytet DESC";
+$sql = "SELECT o.id id, pensja, stanowisko, `data`, logo, nazwa, o.opis FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca WHERE o.stanowisko LIKE '%" . $keyword . "%' ORDER BY priorytet DESC";
 $result = $conn->query($sql);
 ?>
 
@@ -36,7 +35,8 @@ $result = $conn->query($sql);
         </a>
         <form method="POST" action="ogloszenia.php">
             <label>
-                <input style="color: #c5db57; placeholder-color: #c5db57; background-color: transparent" type="text" name="szukaj" placeholder="Szukaj..." value="<?php echo $keyword; ?>" />
+                <input style="color: #c5db57; placeholder-color: #c5db57; background-color: transparent" type="text"
+                    name="szukaj" placeholder="Szukaj..." value="<?php echo $keyword; ?>" />
             </label>
         </form>
         <div class="header-buttons">
@@ -58,22 +58,22 @@ $result = $conn->query($sql);
                         $pensja = "Niepłatne";
                     else
                         $pensja = $row["pensja"] . ",00 PLN / mies.";
-                    echo '<div class="job-listing">
+                    echo '<a href="ogloszenie.php?id=' . $row["id"] .'"><div class="job-listing">
                         <div class="item-image"> 
-                            <img src="data:image/jpeg;base64,' . base64_encode($row["logo"]) . '" alt="' . $row["nazwa"] . '" class="item-image" />
+                            <img src="data:image/png;base64,' . base64_encode($row["logo"]) . '" alt="' . $row["nazwa"] . '" class="item-image" />
                         </div>
                         <div class="item">
                             <div class="item-content">
                                 <h2><span style="color: #DCF763">' . $row["stanowisko"] . '</span></h2>
                                 <h3>' . $row['nazwa'] . '</h3>
                                 <h3>' . $pensja . '</h3>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+                                <h4>' . substr($row["opis"], 0, 250) . '...</h4>
                             </div>
                             <div class="item-content-right"> 
                                 <h4>' . $row["data"] . '</h4>
                             </div>
                         </div>
-                    </div>';
+                    </div></a>';
                 }
             }
             ?>

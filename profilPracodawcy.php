@@ -58,7 +58,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
                     <div class=items style='margin-bottom: 40px'>
                         
                         <div class=imagePracodawca>
-                            <img class='pic' src=\"data:image/jpeg;base64," . base64_encode(string: $re['Logo']) . "\"/>
+                            <img class='image' src=\"data:image/jpeg;base64," . base64_encode(string: $re['Logo']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>
                             <h1 style='color: #ffffff; font-size: 50px; margin-top:0; margin-bottom:0'>{$row['Nazwa']}</h1>
