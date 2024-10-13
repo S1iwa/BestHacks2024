@@ -26,7 +26,7 @@
     </header>
 
 	<div id="container">
-        <span>Profil użytkownika</span>
+        <div class="tytul">Profil użytkownika</div>
 
         <?php
 
@@ -36,17 +36,24 @@
         $sql = "SELECT * FROM student WHERE ID = $id"; // Use double quotes
 
         $result = $mysqli->query($sql);
-        
-       
+            
+        $sth = $mysqli->query($sql);
+        $re=mysqli_fetch_array($sth);
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            
+
             echo    "
-                    <div>
+                    <div class=items>
                         
-                    </div>
-                    <div>
-                        <h1>{$row['Imie']} {$row['Nazwisko']}</h1>
+                        <div class=image>                        
+                            <img class=image src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
+                        </div>
+                        <div class='dane-uzytkownik'>                        
+                            <h1>{$row['Imie']} {$row['Nazwisko']}</h1>
+                            <h2>{$row['Email']}</h2>
+                            <h3>{$row['Opis']}</h3>
+                        </div>
+
                     </div>
                     ";
         }

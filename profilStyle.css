@@ -16,3 +16,22 @@ body{
     box-shadow: 3px 3px 30px 5px #dcf763;
     color: #dcf763 !important;
 }
+.tytul{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.image{
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    border: 4px solid #dcf763; 
+
+    text-align: center;
+    object-fit: contain;
+}
+.items{
+    display: flex;
+}
+.dane-uzytkownik{
+    margin-left: 35px;
+}
