@@ -69,7 +69,7 @@ $result = $conn->query($sql);
                     <h3 style="color: white">Praktyki studenckie</h3>
                     <p>Znajdź praktyki marzeń, a nie czekaj na odpowiedz z facebooka.</p>
                 </a>
-                <a href="#" class="feature-box" style="display: block;">
+                <a href="profilPracodawcy.php" class="feature-box" style="display: block;">
                     <h3 style="color: white">Dla pracodawcy</h3>
                     <p>Znajdź dla swojego zespołu młodych i energicznych studentów.</p>
                 </a>

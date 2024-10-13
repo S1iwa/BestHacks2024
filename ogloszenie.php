@@ -23,7 +23,7 @@ $dbname = "main_database";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>praktykuj.edu.pl</title>
 
-    <link rel="stylesheet" type="text/css" href="ogloszenieStyle.css">
+    <link rel="stylesheet" type="text/css" href="l.css">
     <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" href="css/animation.css">
 
