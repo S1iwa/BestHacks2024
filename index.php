@@ -82,7 +82,7 @@ $result = $conn->query($sql);
         </div>
 
         <div class="margin-auto">
-            <h2>/ Przykładowe ogłoszenia /</h2>
+            <h2>Ogłoszenia partnerów</h2>
         </div>
 
         <!-- Ogłoszenia o pracę -->
