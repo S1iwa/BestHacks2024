@@ -38,8 +38,12 @@ session_start();
                 $_SESSION["user_type"] = "pracodawca";
                 $row = $result->fetch_assoc();
                 $_SESSION["user_id"] = $row["id"];
+                header("Location: /h/profilPrzedsiebiorcy.php");
+                exit();
             } else {
                 echo "Błędny login lub hasło!";
+                header("Location: /h/logowanie.php");
+                exit();
             }
         }
     }

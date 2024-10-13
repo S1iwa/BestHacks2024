@@ -9,7 +9,7 @@ if (isset($_GET["logout"]) && $_GET["logout"]) {
 	header("Location: /h/index.php");
 	exit();
 }
-
+$wrong = isset($_GET["retry"]) ? $_GET["retry"] : false;
 ?>
 
 <!DOCTYPE HTML>
@@ -41,6 +41,9 @@ if (isset($_GET["logout"]) && $_GET["logout"]) {
 			<input type="submit" value="Zaloguj się" />
 		</form>
 		<input type="button" value="Zarejestruj się" onclick="location.href='rejestracja.php'" />
+		<?php if ($wrong) { ?>
+			<p>Błędny login lub hasło!</p>
+		<?php } ?>
 	</div>
 </body>
 
