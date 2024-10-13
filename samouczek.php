@@ -122,14 +122,6 @@ session_start();
                 </div>
             </section>
             <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Czy praktyki wliczają się do stażu pracy?</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                Nie, praktyki studenckie nie są liczone do stażu pracy, gdyż są częścią programu nauczania.
-                </div>
-            </section>
-            <header>
                 <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Korzyści dla pracodawcy</div>
             </header>
             <section>
