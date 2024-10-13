@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "main_database";
 
-$keyword = isset($_POST["szukaj"]) ? $_POST["szukaj"] : "";
+$keyword = isset($_GET["szukaj"]) ? $_GET["szukaj"] : "";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -33,7 +33,7 @@ $result = $conn->query($sql);
         <a href="index.php">
             <h1 class="header-title">Praktykuj.edu.pl</h1>
         </a>
-        <form method="POST" action="ogloszenia.php">
+        <form method="GET" action="ogloszenia.php">
             <label>
                 <input style="color: #c5db57; placeholder-color: #c5db57; background-color: transparent" type="text"
                     name="szukaj" placeholder="Szukaj..." value="<?php echo $keyword; ?>" />
