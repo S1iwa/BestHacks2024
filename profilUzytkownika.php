@@ -33,7 +33,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
             <?php else: ?>
                 <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
             <?php endif; ?>
-            <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
+            <a href="ogloszenia.php" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
         </div>
     </header>
 
