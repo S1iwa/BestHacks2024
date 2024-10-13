@@ -18,21 +18,21 @@
 
 <body>
     <header class="sticky-header" style="top: 0;">
-        <h1 class="header-title">Praktykuj.edu.pl</h1>
+        <a href="index.php"><h1 class="header-title">Praktykuj.edu.pl</h1></a>
         <div class="header-buttons">
             <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
-            <a href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
+            <a style="margin-right: 30px" href="#" class="cta-button secondary browse-button">Przeglądaj ogłoszenia</a>
         </div>
     </header>
 
 	<div id="container">
-        <div class="tytul">Profil użytkownika</div>
+        <div class="tytul" style='color: white'>Profil użytkownika</div>
 
         <?php
 
         $mysqli = new mysqli( "localhost", "root", "", "main_database");
 
-        $id = 1; //$_SESSION["user_id"]
+        $id = $_SESSION["user_id"];
         $sql = "SELECT * FROM student WHERE ID = $id"; // Use double quotes
 
         $result = $mysqli->query($sql);
@@ -44,16 +44,18 @@
 
             echo    "
                     <div class=items>
-                        
                         <div class=image>                        
-                            <img class=image src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
+                            <img class='image pic' src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>                        
-                            <h1>{$row['Imie']} {$row['Nazwisko']}</h1>
-                            <h2>{$row['Email']}</h2>
-                            <h3>{$row['Opis']}</h3>
+                            <h1 style='font-size: 50px'>{$row['Imie']} {$row['Nazwisko']}</h1>
+                            <h2 style='color: white'>{$row['Email']}</h2>
+                            <h3 style='color: #bbbbbb'>{$row['Opis']}</h3>
                         </div>
-
+                        <div class='line'>
+                            <h2 style='color: white'>{$row['Uczelnia']}</h2>
+                            <h2 style='color: #bbbbbb'>{$row['Kierunek']}</h2>
+                        </div>
                     </div>
                     ";
         }
