@@ -28,6 +28,7 @@
 
             if ($mysqli->query($query) === TRUE) {
                 echo "Rejestracja zakończona sukcesem.";
+                
             } else {
                 echo "Błąd: " . $mysqli->error;
             }
