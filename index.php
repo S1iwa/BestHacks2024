@@ -73,10 +73,13 @@ $result = $conn->query($sql);
                     <h3>Staże</h3>
                     <p>Rozpocznij karierę, zdobywając doświadczenie zawodowe.</p>
                 </div>
-                <div class="feature-box">
-                    <h3>Oferty pracy</h3>
-                    <p>Przeglądaj aktualne oferty pracy i znajdź wymarzoną pracę.</p>
-                </div>
+                <a href="#">
+                    <div class="feature-box">
+                    <h3>Samouczek pracodawcy</h3>
+                    <p>Co zrobić by zatrudnić studenta na praktyki</p>
+                </div>  
+                </a>
+
             </section>
         </div>
 
@@ -121,7 +124,7 @@ $result = $conn->query($sql);
     </main>
 
     <footer>
-        <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+        <p style="margin-top: 50px">&copy; 2024 Azciweisakul.inc. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
     <script>

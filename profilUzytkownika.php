@@ -21,7 +21,7 @@ session_start();
 <body>
     <header class="sticky-header" style="top: 0;">
         <a href="index.php"><h1 class="header-title">Praktykuj.edu.pl</h1></a>
-        <div class="header-buttons">
+        <div style="margin-right: 40px" class="header-buttons">
             <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_type'])): ?>
                 <a href="logowanie.php?logout=true" class="cta-button login-button">Wyloguj się</a>
             <?php else: ?>
@@ -52,7 +52,7 @@ session_start();
                     <div class=items>
                         
                         <div class=image>                        
-                            <img class=image src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
+                            <img class='image pic' src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>                        
                             <h1>{$row['Imie']} {$row['Nazwisko']}</h1>

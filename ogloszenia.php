@@ -36,7 +36,7 @@ $result = $conn->query($sql);
         </a>
         <form method="POST" action="ogloszenia.php">
             <label>
-                <input type="text" name="szukaj" placeholder="Szukaj..." value="<?php echo $keyword; ?>" />
+                <input style="color: #c5db57; placeholder-color: #c5db57; background-color: transparent" type="text" name="szukaj" placeholder="Szukaj..." value="<?php echo $keyword; ?>" />
             </label>
         </form>
         <div class="header-buttons">
