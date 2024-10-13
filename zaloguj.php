@@ -29,6 +29,7 @@ session_start();
             $row = $result->fetch_assoc();
             $_SESSION["user_id"] = $row["id"];
             header("Location: /h/profilUzytkownika.php");
+            exit();
         } else {
             $query = "SELECT id FROM pracodawca WHERE Email = '$login' AND Haslo = '$haslo'";
             $result = $mysqli->query($query);
