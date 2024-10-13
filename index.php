@@ -1,11 +1,11 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "main_database";
 
 $entries_count = 3;
-$keyword = isset($_POST["q"]) ? "*" . $_POST["q"] : "";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -35,7 +35,7 @@ $result = $conn->query($sql);
             <h1 class="header-title">Praktykuj.edu.pl</h1>
         </a>
         <div class="header-buttons">
-            <?php if (isset($_SESSION)): ?>
+            <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_type'])): ?>
                 <a href="logowanie.php?logout=true" class="cta-button login-button">Wyloguj się</a>
             <?php else: ?>
                 <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
@@ -47,7 +47,7 @@ $result = $conn->query($sql);
     <main class="center-content">
         <!-- Przyciski w prawym górnym rogu -->
         <div class="top-right-buttons">
-            <?php if (isset($_SESSION)): ?>
+            <?php if (isset($_SESSION['user_id']) && isset($_SESSION['user_type'])): ?>
                 <a href="logowanie.php?logout=true" class="cta-button login-button">Wyloguj się</a>
             <?php else: ?>
                 <a href="logowanie.php" class="cta-button login-button">Zaloguj się</a>
