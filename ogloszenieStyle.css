@@ -54,7 +54,6 @@ body {
 }
 
 .pic {
-    border-radius: 10px;
     object-fit: contain;
 }
 
@@ -69,7 +68,7 @@ body {
 .imageOgloszenia {
     height: 200px;
     width: 200px;
-    border-radius: 20px;
+
 
     text-align: center;
     object-fit: contain;
@@ -77,6 +76,5 @@ body {
 
 .picOgloszenia {
     border: none !important;
-    border-radius: 10px;
 
 }

@@ -42,7 +42,7 @@ session_start();
                 exit();
             } else {
                 echo "Błędny login lub hasło!";
-                header("Location: /h/logowanie.php");
+                header("Location: /h/logowanie.php?retry=true");
                 exit();
             }
         }

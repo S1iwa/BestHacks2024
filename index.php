@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT pensja, stanowisko, `data`, logo, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca ORDER BY priorytet DESC LIMIT " . $entries_count;
+$sql = "SELECT o.id, pensja, stanowisko, `data`, logo, nazwa FROM ogloszenie o JOIN pracodawca p ON o.ID_Pracodawca = p.ID LEFT JOIN priorytety ON o.ID_Pracodawca = priorytety.ID_Pracodawca ORDER BY priorytet DESC LIMIT " . $entries_count;
 $result = $conn->query($sql);
 ?>
 
@@ -94,7 +94,7 @@ $result = $conn->query($sql);
                         $pensja = "Niepłatne";
                     else
                         $pensja = $row["pensja"] . ",00 PLN / mies.";
-                    echo '<div class="job-listing">
+                    echo '<a href="ogloszenie.php?id=' . $row["id"] .'"><div class="job-listing">
                             <div class="item-image"> 
                                 <img src="data:image/jpeg;base64,' . base64_encode($row["logo"]) . '" alt="' . $row["nazwa"] . '" class="item-image" />
                             </div>
@@ -109,7 +109,7 @@ $result = $conn->query($sql);
                                     <h4>' . $row["data"] . '</h4>
                                 </div>
                             </div>
-                        </div>';
+                        </div></a>';
                 }
             }
             ?>
