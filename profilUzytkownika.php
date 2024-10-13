@@ -1,4 +1,4 @@
-<img?php
+<?php
 	session_start();
 ?>
 
@@ -26,26 +26,40 @@
     </header>
 
 	<div id="container">
-        <div class="title">Profil użytkownika</div>
+        <div class="tytul">Profil użytkownika</div>
 
-        <div class="dane">
-            <div class="dane-uzytkownika">
-                <div class="pliki">
-                    <div class="zdjecie">
+        <?php
+
+        $mysqli = new mysqli( "localhost", "root", "", "main_database");
+
+        $id = 1; //$_SESSION["user_id"]
+        $sql = "SELECT * FROM student WHERE ID = $id"; // Use double quotes
+
+        $result = $mysqli->query($sql);
+            
+        $sth = $mysqli->query($sql);
+        $re=mysqli_fetch_array($sth);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+
+            echo    "
+                    <div class=items>
+                        
+                        <div class=image>                        
+                            <img class=image src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
+                        </div>
+                        <div class='dane-uzytkownik'>                        
+                            <h1>{$row['Imie']} {$row['Nazwisko']}</h1>
+                            <h2>{$row['Email']}</h2>
+                            <h3>{$row['Opis']}</h3>
+                        </div>
+
                     </div>
-                    <div class="CV">
-                    </div>    
-                </div>
-                <div class="dane-osobowe">
-                    <div class="imie"></div>
-                    <div class="nazwisko"></div>    
-                    <div class="email"></div>    
-                </div>
-                <div class="opis"></div>
-
-                <div class="zdjecie"></div>
-            </div>
-            <div class="dane-uczelni"></div>
+                    ";
+        }
+        
+        $mysqli->close();
+        ?>
         </div>
 	</div>
 </body>
