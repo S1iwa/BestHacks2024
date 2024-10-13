@@ -57,7 +57,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
             echo "
                     <div class=items>
                         
-                        <div class=image>                        
+                        <div class=image>
                             <img class=image src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>
