@@ -41,9 +41,9 @@ $wrong = isset($_GET["retry"]) ? $_GET["retry"] : false;
 			<input type="submit" value="Zaloguj się" />
 		</form>
 		<input type="button" value="Zarejestruj się" onclick="location.href='rejestracja.php'" />
-		<?php if ($wrong) { ?>
-			<p>Błędny login lub hasło!</p>
-		<?php } ?>
+		<?php if ($wrong): ?>
+			<p style="color: red">Błędny login lub hasło!</p>
+		<?php endif; ?>
 	</div>
 </body>
 

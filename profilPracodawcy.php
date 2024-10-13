@@ -38,8 +38,8 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
     </header>
 
     <div id="container">
-        <div class="tytul">Profil użytkownika</div>
-
+        <div class="tytul" style="color: white">Profil pracodawcy</div>
+        
         <?php
 
         $mysqli = new mysqli("localhost", "root", "", "main_database");

@@ -19,7 +19,6 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
     <link rel="stylesheet" type="text/css" href="profilStyle.css">
     <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" href="css/animation.css">
-
 </head>
 
 <body>
@@ -38,7 +37,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
     </header>
 
     <div id="container">
-        <div class="tytul">Profil użytkownika</div>
+        <div class="tytul" style="color: white">Profil użytkownika</div>
 
         <?php
 
@@ -55,15 +54,15 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_type'])) {
             $row = $result->fetch_assoc();
 
             echo "
-                    <div class=items>
+                    <div class=items style='margin-bottom: 40px'>
                         
-                        <div class=image>
+                        <div class=imagePracodawca>
                             <img class=image src=\"data:image/jpeg;base64," . base64_encode(string: $re['Zdjecie']) . "\"/>
                         </div>
                         <div class='dane-uzytkownik'>
-                            <h1>{$row['Imie']} {$row['Nazwisko']}</h1>
-                            <h2>{$row['Email']}</h2>
-                            <h3>{$row['Opis']}</h3>
+                            <h1 style='color: #ffffff; font-size: 50px; margin-top:0; margin-bottom:0'>{$row['Imie']} {$row['Nazwisko']}</h1>
+                            <h2 style='color: #bbbbbb '>{$row['Email']}</h2>
+                            <h3 style='color: #bbbbbb; font-size: 20px'>{$row['Opis']}</h3>
                         </div>
                     </div>
                     ";
