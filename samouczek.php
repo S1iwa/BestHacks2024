@@ -14,7 +14,6 @@ session_start();
 
     <link rel="stylesheet" type="text/css" href="profilStyle.css">
     <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" href="css/animation.css">
 </head>
 
 <body>
@@ -38,97 +37,7 @@ session_start();
                 <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Praktyki studenckie —
                     obowiązki pracodawcy</div>
             </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                    Praktyki studenckie to nie tylko okazja dla studentów do zdobycia praktycznego doświadczenia w swoim
-                    zawodzie, ale także dla firm do nawiązania współpracy z młodymi, utalentowanymi osobami. To szansa
-                    na kształtowanie przyszłych pracowników oraz budowanie wizerunku atrakcyjnego pracodawcy.
-                </div>
-            </section>
-            <!-- <section>
-                <div style="text-align: center">
-                    <img src="zdjTest.jpg"
-                        style="width: 80%; border-radius: 30px; border: 4px solid white; margin-bottom: 60px">
-                </div>
-            </section> -->
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Zagadnienia poruszane w
-                    artykule</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                    <ul>
-                        <li>Jak zorganizować praktyki studenckie?</li>
-                        <li>Gdzie pracodawca może znaleźć praktykantów?</li>
-                        <li>Obowiązki pracodawcy wobec praktykantów</li>
-                        <li>Korzyści dla pracodawcy</li>
-                        <li>Zarządzanie procesami HR</li>
-                    </ul>
-                </div>
-            </section>
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Jak zorganizować praktyki studenckie?</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                    Pracodawca, chcąc zorganizować praktyki, powinien nawiązać współpracę z uczelnią. Każda uczelnia
-                    posiada własne regulaminy dotyczące praktyk, a student ma swojego opiekuna praktyk, który koordynuje
-                    całość. Praktyki są obowiązkowe, co oznacza, że uczelnie i studenci aktywnie poszukują pracodawców
-                    gotowych na taką współpracę.
-                </div>
-            </section>
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Gdzie pracodawca może znaleźć praktykantów?</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                    Pracodawcy mogą pozyskać praktykantów przez:.
-                    <ul>
-                        <li><strong>Współpracę z uczelniami</strong> – bezpośredni kontakt lub spotkania z kołami naukowymi,</li>
-                        <li><strong>Biura Karier</strong> – oferują platformy do zamieszczania ofert praktyk,</li>
-                        <li><strong>Targi pracy i Dni Kariery</strong> – pozwalają na bezpośrednie spotkania z potencjalnymi kandydatami,</li>
-                        <li><strong>Portale pracy i media społecznościowe</strong> – studenci aktywnie korzystają z takich platform jak LinkedIn, TikTok czy Instagram,</li>
-                        <li><strong>Stronę firmową</strong> – ważne jest, aby sekcja "Kariera" była aktualna i łatwa do znalezienia.</li>
-                    </ul>
-                </div>
-            </section>
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Obowiązki pracodawcy wobec praktykantów</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                <ul>
-                        <li><strong>Dokumenty:</strong> Pracodawca zawiera umowę z uczelnią, nie ze studentem. Umowa określa zasady i zakres praktyk, które pracodawca może współtworzyć. Dodatkowo student może dostarczyć skierowanie na praktyki.</li>
-                        <li><strong>Wprowadzenie do firmy:</strong> Pracodawca ma obowiązek zapoznać praktykanta z regulaminem pracy oraz zasadami ochrony danych.</li>
-                        <li><strong>Dziennik praktyk:</strong> Pracodawca może być zobowiązany do prowadzenia dziennika praktyk, gdzie dokumentowane będą zadania i zdobyte umiejętności.</li>
-                        <li><strong>Zaświadczenie:</strong> Po zakończeniu praktyk pracodawca musi wystawić zaświadczenie, które student dostarcza uczelni.</li>
-                    </ul>
-                </div>
-            </section>
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">BHP i badania lekarskie</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                    Choć przepisy prawa pracy nie dotyczą bezpośrednio praktyk studenckich, pracodawca musi zapewnić bezpieczne warunki pracy. Obejmuje to szkolenie z zakresu BHP oraz wyposażenie w narzędzia i odzież ochronną. Badania lekarskie nie są wymagane.
-                </div>
-            </section>
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Wynagrodzenie i obowiązki względem ZUS</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                Praktyki studenckie zazwyczaj są bezpłatne, a w przypadku takich praktyk pracodawca nie musi zgłaszać studentów do ZUS ani odprowadzać składek. Wynagrodzenie może być oferowane według decyzji pracodawcy.
-                </div>
-            </section>
-            <header>
-                <div class="tytul" style="color: #DCF763; font-size: 50px; margin-bottom: 40px">Korzyści dla pracodawcy</div>
-            </header>
-            <section>
-                <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px">
-                Praktyki studenckie to przede wszystkim możliwość odkrycia utalentowanych kandydatów, których można zatrudnić w przyszłości, zmniejszając koszty rekrutacji. Dodatkową zaletą jest brak konieczności angażowania się w skomplikowane procedury formalne, ponieważ większość dokumentacji przygotowuje uczelnia.
-                </div>
-            </section>
+            <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Praktyki studenckie to nie tylko okazja dla studentów do zdobycia praktycznego doświadczenia w swoim zawodzie, ale także dla firm do nawiązania współpracy z młodymi, utalentowanymi osobami. To szansa na kształtowanie przyszłych pracowników oraz budowanie wizerunku atrakcyjnego pracodawcy. </div> </section> <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Dla przedsiębiorców organizacja praktyk studenckich może być kluczowym elementem budowania długoterminowej strategii kadrowej. W dobie wyzwań związanych z rekrutacją wykwalifikowanych pracowników, wielu pracodawców dostrzega korzyści płynące z nawiązania współpracy ze studentami, którzy w przyszłości mogą stać się cennymi członkami ich zespołów. Platforma <b>Praktykuj.edu.pl</b> to narzędzie, które umożliwia skuteczne łączenie firm z utalentowanymi studentami, zainteresowanymi zdobyciem praktycznego doświadczenia zawodowego. </div> </section> <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Dlaczego warto zorganizować praktyki za pośrednictwem platformy <b>Praktykuj.edu.pl</b>? Po pierwsze, jest to doskonała okazja dla przedsiębiorców, aby poznać kandydatów jeszcze przed rozpoczęciem standardowego procesu rekrutacyjnego. Studenci, korzystający z naszej platformy, aktywnie poszukują praktyk, co oznacza, że są zmotywowani do pracy i zdobywania wiedzy. Przedsiębiorcy mają możliwość obserwacji ich rozwoju w realnych warunkach biznesowych, co pozwala na lepszą ocenę ich kompetencji i dopasowanie do zespołu. </div> </section> <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Kolejną zaletą korzystania z platformy <b>Praktykuj.edu.pl</b> jest oszczędność czasu i zasobów. Zamiast prowadzić długotrwałe poszukiwania odpowiednich kandydatów, przedsiębiorcy mają dostęp do bazy studentów, którzy są już gotowi na podjęcie praktyk. To znacząco przyspiesza proces rekrutacji i minimalizuje koszty związane z poszukiwaniem potencjalnych pracowników. Platforma oferuje intuicyjny interfejs, który ułatwia zarówno pracodawcom, jak i studentom, szybkie i efektywne nawiązanie kontaktu. </div> </section> <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Praktyki studenckie organizowane przez <b>Praktykuj.edu.pl</b> to również doskonały sposób na wzmocnienie marki pracodawcy. Firmy, które inwestują w rozwój młodych ludzi, zyskują reputację nowoczesnych, zaangażowanych i odpowiedzialnych społecznie. Przedsiębiorcy mogą pokazać, że zależy im na edukacji i przyszłości młodego pokolenia, co pozytywnie wpływa na postrzeganie ich na rynku pracy. W dłuższej perspektywie współpraca z uczelniami i studentami przyczynia się do tworzenia silnych relacji, które mogą zaowocować stałym dostępem do nowych talentów. </div> </section> <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Korzystanie z platformy <b>Praktykuj.edu.pl</b> to korzyść nie tylko dla studentów, ale również dla samych przedsiębiorców. Dzięki współpracy z młodymi osobami, firmy mogą zyskać nową perspektywę na swoje projekty oraz wprowadzić innowacyjne rozwiązania, które są często inspirowane świeżym spojrzeniem młodych praktykantów. To doskonała okazja do wymiany doświadczeń oraz wzbogacenia wiedzy zespołu o nowe, aktualne trendy i technologie. </div> </section> <section> <div style="color: white; font-size: 26px; text-indent: 60px; margin-bottom: 60px"> Platforma <b>Praktykuj.edu.pl</b> to zatem idealne miejsce dla przedsiębiorców, którzy chcą nie tylko wspierać młode talenty, ale także skutecznie rozwijać swoją firmę poprzez dostęp do najlepiej przygotowanych studentów. Długofalowe inwestycje w młodych ludzi mogą przynieść realne korzyści, a współpraca na etapie praktyk pozwala firmom budować solidne fundamenty pod przyszłe sukcesy. </div> </section>
         </article>
     </div>
     </div>

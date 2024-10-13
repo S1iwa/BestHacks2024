@@ -14,8 +14,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
-    box-shadow: 3px 3px 30px 5px #dcf763;
-    color: #dcf763 !important;
+
+    justify-content: center;
 }
 
 .tytul {
