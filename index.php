@@ -65,19 +65,17 @@ $result = $conn->query($sql);
 
             <!-- Trzy okienka prezentujące główne funkcje strony -->
             <section class="features">
-                <div class="feature-box">
-                    <h3>Praktyki studenckie</h3>
-                    <p>Znajdź praktyki zgodne z Twoim kierunkiem studiów.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>Staże</h3>
-                    <p>Rozpocznij karierę, zdobywając doświadczenie zawodowe.</p>
-                </div>
-                <a href="#">
-                    <div class="feature-box">
-                    <h3>Samouczek pracodawcy</h3>
-                    <p>Co zrobić by zatrudnić studenta na praktyki</p>
-                </div>  
+                <a href="samouczek.php" class="feature-box" style="display: block;">
+                    <h3 style="color: white">Praktyki studenckie</h3>
+                    <p>Znajdź praktyki marzeń, a nie czekaj na odpowiedz z facebooka.</p>
+                </a>
+                <a href="samouczek.php" class="feature-box" style="display: block;">
+                    <h3 style="color: white">Dla pracodawcy</h3>
+                    <p>Znajdź dla swojego zespołu młodych i energicznych!</p>
+                </a>
+                <a href="samouczek.php" class="feature-box" style="display: block;">
+                    <h3 style="color: white">Samouczek</h3>
+                    <p>Zobacz jak łatwo zatrudnić najlepszych studentów na praktyki.</p>
                 </a>
 
             </section>
