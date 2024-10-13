@@ -65,13 +65,13 @@ $result = $conn->query($sql);
 
             <!-- Trzy okienka prezentujące główne funkcje strony -->
             <section class="features">
-                <a href="samouczek.php" class="feature-box" style="display: block;">
+                <a href="ogloszenia.php" class="feature-box" style="display: block;">
                     <h3 style="color: white">Praktyki studenckie</h3>
                     <p>Znajdź praktyki marzeń, a nie czekaj na odpowiedz z facebooka.</p>
                 </a>
-                <a href="samouczek.php" class="feature-box" style="display: block;">
+                <a href="#" class="feature-box" style="display: block;">
                     <h3 style="color: white">Dla pracodawcy</h3>
-                    <p>Znajdź dla swojego zespołu młodych i energicznych!</p>
+                    <p>Znajdź dla swojego zespołu młodych i energicznych studentów.</p>
                 </a>
                 <a href="samouczek.php" class="feature-box" style="display: block;">
                     <h3 style="color: white">Samouczek</h3>
